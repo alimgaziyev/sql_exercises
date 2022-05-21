@@ -2,18 +2,19 @@
 ## JUSAN SINGULARITY SQL request
 
 ### How to run
+
 ```
   1) Install SQLite            
         
-        **:-$ sudo apt install sqlite3**
+        :-$ sudo apt install sqlite3
   
   2) Open Terminal and Run     
         
-        **:-$ cat sql-requests/ex_01.sql | sqlite3 -column -header database/database.sqlite**
+        :-$ cat sql-requests/ex_01.sql | sqlite3 -column -header database/database.sqlite
 ```
-```
+
   **!!!**  ***Recomend to download SQLiteBrowser***
-```
+  
 
 ![image](https://user-images.githubusercontent.com/103408391/169658732-4ade1523-fb4c-46b6-b67c-dbe31fba1dc0.png)
 
