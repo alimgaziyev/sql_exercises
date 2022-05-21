@@ -10,7 +10,7 @@
   
   2) Open Terminal and Run     
         
-        :-$ cat sql-requests/ex_01.sql | sqlite3 -column -header database/database.sqlite
+        :-$ cat sql-requests/ex_??.sql | sqlite3 -column -header database/database.sqlite
 ```
 
   **!!!**  ***Recomend to download SQLiteBrowser***
