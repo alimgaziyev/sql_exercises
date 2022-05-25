@@ -1,16 +1,10 @@
-SELECT MAX(TotalSell) AS MaxTotalSell, FullName
-FROM (SELECT
+SELECT
 	SUM(i.total) TotalSell,
 	e.FirstName || " " || e.LastName AS FullName
-FROM
-	Employee e
-INNER JOIN
-	Customer c ON e.EmployeeId = c.SupportRepId
-INNER JOIN 
-	Invoice i ON c.CustomerId = i.CustomerId
-WHERE
-	(e.Title LIKE '%sales%' OR '%agent%')
-	AND
-	(strftime('%Y', i.InvoiceDate))
-GROUP BY
-	FullName)
+FROM Invoice i
+JOIN Customer c ON i.CustomerId = c.CustomerId
+JOIN Employee e ON c.SupportRepId = e.EmployeeId
+GROUP BY c.SupportRepId
+ORDER BY
+	TotalSell DESC
+LIMIT 1

@@ -10,3 +10,5 @@ INNER JOIN
 	Album al ON al.AlbumId = t.AlbumId
 INNER JOIN
 	Artist a ON a.ArtistId = al.ArtistId
+GROUP BY
+	t.Name

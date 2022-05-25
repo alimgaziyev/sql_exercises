@@ -9,7 +9,7 @@ INNER JOIN
 INNER JOIN 
 	Invoice i ON c.CustomerId = i.CustomerId
 WHERE
-	(e.Title LIKE '%sales%' OR '%agent%')
+	(e.Title LIKE '%sales%')
 	AND
 	(strftime('%Y', i.InvoiceDate) IN ('2009'))
 GROUP BY

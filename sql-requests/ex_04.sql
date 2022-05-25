@@ -3,4 +3,4 @@ SELECT
 FROM
 	Employee
 WHERE
-	Title like '%Sales%' OR '%Agent%' 
+	Title like '%Agent%' 

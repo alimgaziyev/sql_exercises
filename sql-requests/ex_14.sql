@@ -1,9 +1,9 @@
 SELECT
-	count(pt.TrackId) AS TrackCount,
+	count(*) AS TrackCount,
 	p.Name AS PlaylistName
 FROM
 	Playlist p
-LEFT JOIN
+JOIN
 	PlaylistTrack pt ON pt.PlaylistId = p.PlaylistId
 GROUP BY
 	p.Name

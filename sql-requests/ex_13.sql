@@ -1,9 +1,11 @@
 SELECT
-	count(InvoiceId) AS count,
-	BillingCountry AS Country
+	count(*) AS count,
+	i.BillingCountry AS Country
 FROM
-	Invoice
+	InvoiceLine il
+JOIN
+	Invoice i ON il.InvoiceId = i.InvoiceId
 WHERE
-	BillingCountry is not NULL
+	i.BillingCountry is not NULL
 GROUP BY
-	BillingCountry
+	i.BillingCountry

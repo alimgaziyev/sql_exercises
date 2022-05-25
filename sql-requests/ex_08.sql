@@ -1,7 +1,11 @@
 SELECT
 	strftime('%Y', InvoiceDate) AS Year,
-	total
+	SUM(total) AS Total_sale
 FROM
 	Invoice
 WHERE
-	strftime('%Y', InvoiceDate) BETWEEN '2009' AND '2011'
+	strftime('%Y', InvoiceDate) LIKE '2009'
+	OR
+	strftime('%Y', InvoiceDate) LIKE '2011'
+GROUP BY
+	strftime('%Y', InvoiceDate);

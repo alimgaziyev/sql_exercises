@@ -1,3 +1,4 @@
+
 -- 17
 SELECT sum(iv.Total) AS 'Total Sales', e.FirstName || ' ' || e.LastName AS 'Sales Agent'
 FROM Invoice iv
